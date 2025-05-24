@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Slyfox Labs Frontend Developers',
     images: [
       {
-        url: 'https://files.catbox.moe/kcr2fr.png',
+        url: 'https://sly-fox-labs.vercel.app//images/preview.png',
       },
     ],
   },
