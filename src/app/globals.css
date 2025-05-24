@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 228 5% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 228 5% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 5% 13%;
+
+    --primary: 256 84% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 4% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%; 
+    --muted-foreground: 240 4% 46%; 
+
+    --accent: 285 83% 53%; 
+    --accent-foreground: 0 0% 100%; 
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 87%; 
+    --input: 215 20% 87%; 
+    --ring: 256 84% 55%; 
+
+    --radius: 0.75rem;
+    
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 228 5% 13%; 
+    --foreground: 0 0% 97.3%;
+
+    --card: 220 4% 10%; 
+    --card-foreground: 0 0% 97.3%;
+
+    --popover: 220 4% 10%;
+    --popover-foreground: 0 0% 97.3%;
+
+    --primary: 256 84% 65%; 
+    --primary-foreground: 228 5% 13%;
+
+    --secondary: 220 4% 30%; 
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 4% 15%;
+    --muted-foreground: 240 4% 60%;
+
+    --accent: 285 83% 63%; 
+    --accent-foreground: 228 5% 13%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 4% 25%; 
+    --input: 220 4% 25%;
+    --ring: 256 84% 65%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .shadow-top {
+    box-shadow: 0 -2px 4px -1px rgb(0 0 0 / 0.06), 0 -4px 5px -2px rgb(0 0 0 / 0.1);
+  }
+  .dark .shadow-top {
+
+    box-shadow: 0 -2px 4px -1px rgb(0 0 0 / 0.2), 0 -4px 5px -2px rgb(0 0 0 / 0.2);
+  }
+}
+
