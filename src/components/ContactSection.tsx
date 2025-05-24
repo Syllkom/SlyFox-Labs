@@ -61,9 +61,9 @@ export default function ContactSection() {
   }, []);
 
   const socialLinks = [
-    { Icon: CustomGithubIcon, href: "#", label: "GitHub", hint: "github social logo" },
-    { Icon: CustomTelegramIcon, href: "#", label: "Telegram", hint: "telegram social logo" },
-    { Icon: CustomWhatsappIcon, href: "#", label: "WhatsApp", hint: "whatsapp social logo" },
+    { Icon: CustomGithubIcon, href: "https://github.com/Syllkom", label: "GitHub", hint: "github social logo" },
+    { Icon: CustomTelegramIcon, href: "https://t.me/Syllkom", label: "Telegram", hint: "telegram social logo" },
+    { Icon: CustomWhatsappIcon, href: "https://whatsapp.com/channel/0029VaiYDdB89inkuoRbEV13", label: "WhatsApp", hint: "whatsapp social logo" },
   ];
 
   return (
@@ -114,6 +114,7 @@ export default function ContactSection() {
               <Button
                 variant="filled"
                 size="lg"
+                href="Wa.me/573113825327?text=Hola"
                 className={cn(
                   "w-full sm:w-auto rounded-full opacity-0", 
                   isVisible && "animate-fadeIn"
