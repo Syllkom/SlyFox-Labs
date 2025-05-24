@@ -5,14 +5,15 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { ThemeToggleButton } from './ThemeToggleButton'; 
+import { ThemeToggleButton } from './ThemeToggleButton';
+import Link from 'next/link';
 
 export default function TopBar() {
   const [scrolled, setScrolled] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true); 
+    setLoaded(true);
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 10) {
@@ -29,37 +30,38 @@ export default function TopBar() {
   }, []);
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-background/80 backdrop-blur-md h-16 transition-shadow duration-200",
         scrolled ? "shadow-sm" : "shadow-none"
       )}
     >
-      <div 
+      <div
         className={cn(
           "flex items-center space-x-1 opacity-0",
           loaded && "animate-fadeIn"
         )}
         style={{ animationDelay: loaded ? '0.1s' : undefined }}
       >
-        <Image 
-          src="/images/SlyFox.png" 
-          alt="SlyFox Logo" 
-          width={40} 
-          height={40} 
+        <Image
+          src="/images/SlyFox.png"
+          alt="SlyFox Logo"
+          width={40}
+          height={40}
           data-ai-hint="fox logo orange"
         />
         <span className="text-2xl font-bold text-foreground">SlyFox</span>
       </div>
       <div className="flex items-center space-x-2">
-        <Button 
+        <Button
           className={cn(
             "rounded-full px-6 py-2 text-sm opacity-0",
             loaded && "animate-fadeIn"
           )}
           style={{ animationDelay: loaded ? '0.3s' : undefined }}
+          asChild
         >
-          HorekuOs
+          <Link href="https://horekuos.netlify.app/">HorekuOs</Link>
         </Button>
         <ThemeToggleButton />
       </div>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
+import Link from 'next/link';
 
 const CustomGithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-brand-github" {...props}>
@@ -61,9 +61,9 @@ export default function ContactSection() {
   }, []);
 
   const socialLinks = [
-    { Icon: CustomGithubIcon, href: "https://github.com/Syllkom", label: "GitHub", hint: "github social logo" },
-    { Icon: CustomTelegramIcon, href: "https://t.me/Syllkom", label: "Telegram", hint: "telegram social logo" },
-    { Icon: CustomWhatsappIcon, href: "https://whatsapp.com/channel/0029VaiYDdB89inkuoRbEV13", label: "WhatsApp", hint: "whatsapp social logo" },
+    { Icon: CustomGithubIcon, href: "#", label: "GitHub", hint: "github social logo" },
+    { Icon: CustomTelegramIcon, href: "#", label: "Telegram", hint: "telegram social logo" },
+    { Icon: CustomWhatsappIcon, href: "#", label: "WhatsApp", hint: "whatsapp social logo" },
   ];
 
   return (
@@ -76,11 +76,9 @@ export default function ContactSection() {
       )}
     >
       <div className="w-full max-w-4xl xl:max-w-5xl mx-auto px-6 sm:px-8 md:px-12 flex flex-col md:flex-row md:items-start md:gap-10 lg:gap-16">
-
-        
         <div
           className={cn(
-            "w-full md:w-2/5 md:order-1 mb-12 md:mb-0 opacity-0", 
+            "w-full md:w-2/5 md:order-1 mb-12 md:mb-0 opacity-0",
              isVisible && "md:animate-slideInLeft animate-slideInUp"
           )}
           style={{ animationDelay: isVisible ? '0.3s' : undefined }}
@@ -114,30 +112,28 @@ export default function ContactSection() {
               <Button
                 variant="filled"
                 size="lg"
-                href="Wa.me/573113825327?text=Hola"
                 className={cn(
-                  "w-full sm:w-auto rounded-full opacity-0", 
+                  "w-full sm:w-auto rounded-full opacity-0",
                   isVisible && "animate-fadeIn"
                 )}
                 style={{ animationDelay: isVisible ? '0.9s' : undefined }}
+                asChild
               >
-                Contactar
+                <Link href="https://Wa.me/573113825327?text=Hola">Contactar</Link>
               </Button>
             </CardContent>
           </Card>
         </div>
-
-        
         <div
           className={cn(
-            "w-full md:w-3/5 md:order-2 text-left opacity-0", 
+            "w-full md:w-3/5 md:order-2 text-left opacity-0",
             isVisible && "md:animate-slideInRight animate-slideInUp"
           )}
           style={{ animationDelay: isVisible ? '0.2s' : undefined }}
         >
           <div
             className={cn(
-              "flex items-center justify-start space-x-1 mb-4 opacity-0", 
+              "flex items-center justify-start space-x-1 mb-4 opacity-0",
               isVisible && "animate-fadeIn"
             )}
             style={{ animationDelay: isVisible ? '0.4s' : undefined }}
@@ -190,7 +186,6 @@ export default function ContactSection() {
             © 2025 SlyFox Labs
           </p>
         </div>
-
       </div>
     </section>
   );
